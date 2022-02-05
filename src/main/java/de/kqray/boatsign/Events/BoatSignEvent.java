@@ -1,5 +1,6 @@
-package de.kqray.chestboat.Events;
+package de.kqray.boatsign.Events;
 
+import de.kqray.boatsign.BoatSign;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Sign;
@@ -10,17 +11,20 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
 public class BoatSignEvent implements Listener {
+
     @EventHandler
+
     public void onSignChange(SignChangeEvent event) {
     //Check if the player is op
         if (!event.getPlayer().isOp() ){
+
             String s = event.getLine(0);
             if (!s.equalsIgnoreCase("[Boat]"))return;
             event.setLine(0,"");
             event.setLine(1,"");
             event.setLine(2,"");
             event.setLine(3,"");
-            event.getPlayer().sendMessage(ChatColor.RED +"Du darsft keine boot schilder erstellen");
+            event.getPlayer().sendMessage("§cDu besitzt nicht die nötige Berechtigung um ein BoatSign zu erstellen");
         }
         //Check if it says [Boat] on the sign, if yes, rename it
             String s = event.getLine(0);

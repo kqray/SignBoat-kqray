@@ -1,6 +1,6 @@
 name: BoatSign
 version: '${project.version}'
-main: de.kqray.chestboat.ChestBoat
+main: de.kqray.boatsign.BoatSign
 api-version: 1.18
 authors: [ Kqray ]
 commands:
