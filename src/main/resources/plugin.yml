@@ -1,0 +1,8 @@
+name: BoatSign
+version: '${project.version}'
+main: de.kqray.chestboat.ChestBoat
+api-version: 1.18
+authors: [ Kqray ]
+commands:
+  Boat:
+    description: Gibt dir mit einem schildt ein boot
